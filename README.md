@@ -73,3 +73,7 @@ If you want to contribute to this project, feel free to create pull requests or 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 Enjoy tracking your habits with Habit Manager!
+
+### Tags
+#habit-tracker #activity-tracker #habit-management #self-improvement #tracking-app #goal-setting #time-tracker  #activity-management 
+
