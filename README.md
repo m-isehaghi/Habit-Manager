@@ -80,7 +80,7 @@ If you want to contribute to this project, feel free to create pull requests or 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the Apache-2.0 license.
 
 Enjoy tracking your habits with Habit Manager!
 
