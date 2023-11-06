@@ -1,6 +1,9 @@
+var sheetName = "planned"; // Change this to the name of your sheet
+var recipientEmail = "example@gmail.com" // Change this to your recipient email
+var recipientName = "Morteza" // Change this to your recipient name, this name would show in the title of the chart.
+
+
 function main() {
-  var sheetName = "planned"; // Change this to the name of your sheet
-  var recipientEmail = "example@gmail.com" // Change this to your recipient email
 
   // Retrieve calendars name from sheet.
   calendars = getRowAsList(1, sheetName);
@@ -135,7 +138,7 @@ function createChart(calendars, planneds, actuals) {
 
   // Create a new column chart with customization options, including titles, dimensions, and the DataTable.
   var chart = Charts.newColumnChart()
-    .setTitle('Weekly report of Morteza activity in week ' + getCurrentWeekNumber() + ' of the year ' + getCurrentYearAsString())
+    .setTitle('Weekly report of '+ recipientName +' activity in week ' + getCurrentWeekNumber() + ' of the year ' + getCurrentYearAsString())
     .setXAxisTitle('Activity')
     .setYAxisTitle('Amount (Minutes)')
     .setDimensions(800, 400)
