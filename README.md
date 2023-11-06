@@ -34,11 +34,11 @@ Before you can use Habit Manager, make sure you have the following:
    - Open your Google Sheet.
    - Click on "Extensions" > "Apps Script."
    - Paste the provided code into the script editor and save it.
-   - Run the `myFunction` function once to grant necessary permissions.
+   - Run the `main` function once to grant necessary permissions.
 
 4. Set Up a Daily Trigger:
    - In the script editor, click on the clock icon.
-   - Configure a daily trigger for the `myFunction` function.
+   - Configure a daily trigger for the `main` function.
 
 ## Usage
 
