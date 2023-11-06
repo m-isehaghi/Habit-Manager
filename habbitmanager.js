@@ -1,11 +1,11 @@
 function main() {
   var sheetName = "planned"; // Change this to the name of your sheet
-  var recipientEmail = "example@gmail.com" // Change this to your recipient email
+  var recipientEmail = "m.isehaghi@gmail.com" // Change this to your recipient email
 
   // Retrieve calendars name from sheet.
   calendars = getRowAsList(1, sheetName);
 
-  // Retrieve planned data from the sheet.
+  // Retrieve planned data from the.
   planneds = getRowAsList(2, sheetName);
 
   // Check if data lengths match.
@@ -91,56 +91,105 @@ function sumEventsDuration(fromDate,calendars) {
   return results;
 }
 
+/**
+ * Gets the date and time representing the start of the current week.
+ *
+ * @returns {Date} The date and time set to the first hour of the current week.
+ */
 function getFirstHourOfCurrentWeek() {
+  // Get the current date.
   var today = new Date();
-  var dayOfWeek = today.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
-  var daysToMonday = 1 - dayOfWeek; // Calculate how many days until Monday
+
+  // Determine the day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday).
+  var dayOfWeek = today.getDay();
+
+  // Calculate how many days until the start of the week (Monday).
+  var daysToMonday = 1 - dayOfWeek;
+
+  // Create a new Date object representing the first day of the current week.
   var firstDayOfCurrentWeek = new Date(today);
   firstDayOfCurrentWeek.setDate(today.getDate() + daysToMonday);
-  
-  // Set the time to 00:00:00 for the first hour of the day
+
+  // Set the time to 00:00:00 for the first hour of the day.
   firstDayOfCurrentWeek.setHours(0, 0, 0, 0);
-  
+
   return firstDayOfCurrentWeek;
 }
 
+// This function creates a column chart to visualize planned and actual activities.
+// It takes three arrays as input: 'calendars,' 'planneds,' and 'actuals.'
+// 'calendars' contains the activity names, 'planneds' has planned durations,
+// and 'actuals' contains actual durations for each activity.
+
 function createChart(calendars, planneds, actuals) {
+  // Create a new DataTable for the chart with three columns: 'Activity,' 'Planned,' and 'Actual.'
   var sampleData = Charts.newDataTable()
     .addColumn(Charts.ColumnType.STRING, "Activity")
     .addColumn(Charts.ColumnType.NUMBER, "Planned")
     .addColumn(Charts.ColumnType.NUMBER, "Actual");
 
-  // Create a loop to add data rows dynamically
+  // Iterate through the provided data arrays and add rows to the DataTable.
   for (var i = 0; i < calendars.length; i++) {
     sampleData.addRow([calendars[i], planneds[i], actuals[i]]);
   }
 
+  // Create a new column chart with customization options, including titles, dimensions, and the DataTable.
   var chart = Charts.newColumnChart()
-    .setTitle('Weekly report of Morteza activity in week '+ getCurrentWeekNumber() +' of the year '+ getCurrentYearAsString())
+    .setTitle('Weekly report of Morteza activity in week ' + getCurrentWeekNumber() + ' of the year ' + getCurrentYearAsString())
     .setXAxisTitle('Activity')
     .setYAxisTitle('Amount (Minutes)')
     .setDimensions(800, 400)
     .setDataTable(sampleData)
     .build();
-    return chart;
+    
+  // Return the generated chart.
+  return chart;
 }
 
 
+
+/**
+ * Gets the current week number of the year based on the current date.
+ *
+ * @returns {number} The current week number.
+ */
 function getCurrentWeekNumber() {
+  // Get the current date.
   var currentDate = new Date();
+  
+  // Format the current date to retrieve the week number.
+  // 'w' is the format specifier for week number.
   var weekNumber = Utilities.formatDate(currentDate, Session.getScriptTimeZone(), 'w');
+  
+  // Parse the week number as an integer and return it.
   return parseInt(weekNumber);
 }
 
+/**
+ * Gets the current year as a string.
+ *
+ * @returns {string} The current year as a string.
+ */
 function getCurrentYearAsString() {
+  // Get the current date.
   var currentDate = new Date();
+  
+  // Extract the current year from the date object.
   var currentYear = currentDate.getFullYear();
+  
+  // Convert the current year to a string and return it.
   return currentYear.toString();
 }
 
 
-function sendChartByEmail(chart,recipientEmail) {
 
+/**
+ * Sends a chart as an email attachment to the specified recipient.
+ *
+ * @param {Chart} chart - The chart to be sent as an image attachment.
+ * @param {string} recipientEmail - The email address of the recipient.
+ */
+function sendChartByEmail(chart, recipientEmail) {
   // Capture the chart as an image blob.
   var chartImageBlob = chart.getAs('image/png');
 
@@ -153,6 +202,7 @@ function sendChartByEmail(chart,recipientEmail) {
     mimeType: 'image/png'
   };
 
+  // Send the email with the chart attachment to the recipient.
   MailApp.sendEmail({
     to: recipientEmail,
     subject: subject,
