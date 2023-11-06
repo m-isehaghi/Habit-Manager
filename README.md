@@ -2,6 +2,9 @@
 
 Habit Manager is a simple tool that allows you to plan and track your daily activities, then receive a chart summarizing your activities via email. It is designed to work with Google Sheets and Google Calendar. This README will guide you through the setup and usage of this tool.
 
+![image](https://github.com/mortezaisehaghi/Habit-Manager/assets/13310072/50a1a83d-4761-4945-855c-76098eaee45e)
+
+
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
