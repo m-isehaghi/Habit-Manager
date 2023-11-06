@@ -1,21 +1,25 @@
-function myFunction() {
+function main() {
   var sheetName = "planned"; // Change this to the name of your sheet
   var recipientEmail = "example@gmail.com" // Change this to your recipient email
 
+  // Retrieve calendars name from sheet.
   calendars = getRowAsList(1, sheetName);
+
+  // Retrieve planned data from the sheet.
   planneds = getRowAsList(2, sheetName);
 
-
+  // Check if data lengths match.
   if (calendars.length !== planneds.length) {
     Logger.log("Incorrect sheet data");
   } 
 
-  Logger.log(calendars);
-  Logger.log(planneds);
-
+  // Calculate actuals for each calendar.
   actuals = sumEventsDuration(getFirstHourOfCurrentWeek(),calendars)
-  Logger.log(actuals);
+  
+  // Create the chart.
   chart = createChart(calendars, planneds, actuals)
+
+  // Send the chart by email.
   sendChartByEmail(chart,recipientEmail)
 
 }
