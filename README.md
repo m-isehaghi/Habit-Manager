@@ -23,7 +23,7 @@ Before you can use Habit Manager, make sure you have the following:
 
 1. Create a Google Sheet:
    - Create a new Google Sheet or use an existing one to plan your activities. The first row should contain the names of your calendars (e.g., "Sport" for gym, walking, and running).
-   - In the second row, add the planned hours for each activity.
+   - In the second row, add the planned hours for each activity per week.
    - Take note of the Google Sheet's name as you'll need it later.
 
 2. Set up Google Calendar:
