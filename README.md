@@ -3,13 +3,13 @@
 Hobbit Manager is a versatile Activity Manager that simplifies the process of planning and tracking your daily activities. Whether you want to boost your productivity, cultivate new habits, or maintain a record of your daily routines, Hobbit Manager has you covered. The best part? No need to install any applications or learn complex software interfaces. You only require a Google account to get started.
 Features:
 
-    Seamless Integration with Google Services: Hobbit Manager is designed to seamlessly integrate with Google Sheets and Google Calendar, making it easy to leverage the power of these popular productivity tools.
+Seamless Integration with Google Services: Hobbit Manager is designed to seamlessly integrate with Google Sheets and Google Calendar, making it easy to leverage the power of these popular productivity tools.
 
-    Track Your Progress: Effortlessly track your daily activities, set targets, and monitor your progress with an intuitive interface.
+Track Your Progress: Effortlessly track your daily activities, set targets, and monitor your progress with an intuitive interface.
 
-    Summarize Your Activities: Receive a summary of your daily activities via email, providing a convenient way to review and reflect on your accomplishments.
+Summarize Your Activities: Receive a summary of your daily activities via email, providing a convenient way to review and reflect on your accomplishments.
 
-    User-Friendly Setup: This README is your step-by-step guide to setting up and using the Hobbit Manager. Whether you're tech-savvy or new to activity tracking, we've got you covered.
+User-Friendly Setup: This README is your step-by-step guide to setting up and using the Hobbit Manager. Whether you're tech-savvy or new to activity tracking, we've got you covered.
 
 ‌Below is a sample chart that I created for my activities:
 ![image](https://github.com/mortezaisehaghi/Habit-Manager/assets/13310072/5f00dd0e-03bd-4524-9eae-5f0cbdb883a7)
