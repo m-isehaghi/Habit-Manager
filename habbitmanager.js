@@ -1,6 +1,6 @@
 function main() {
   var sheetName = "planned"; // Change this to the name of your sheet
-  var recipientEmail = "m.isehaghi@gmail.com" // Change this to your recipient email
+  var recipientEmail = "example@gmail.com" // Change this to your recipient email
 
   // Retrieve calendars name from sheet.
   calendars = getRowAsList(1, sheetName);
