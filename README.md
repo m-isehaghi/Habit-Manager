@@ -88,5 +88,5 @@ Enjoy tracking your habits with Habit Manager!
 #habit-tracker #activity-tracker #habit-management #self-improvement #tracking-app #goal-setting #time-tracker  #activity-management 
 #Habit-Manager #activity-Manager #activity-Manager-google #habit-Manager-google #activity-Manager-apps-script #activity-management-apps-script
 #apps-script #Habit-Manager-google #activity-management-google #activity-Manager-google #activity-Manager-google #activity-Manager-google
-#management #habit #management #activity #tracking #google #calendar #apps-script #goole-sheet #google-calendar #google-activity-management
+#management #habit #management #activity #tracking #google #calendar #apps-script #goole-sheet #google-calendar #google-activity-management #javascript
 
