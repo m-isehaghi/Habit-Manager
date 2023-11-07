@@ -212,4 +212,7 @@ function sendChartByEmail(chart, recipientEmail) {
     body: message,
     attachments: [attachment]
   });
+
+  // Todo for Masoud 
+  // Create a Yearly report
 }
